@@ -1,0 +1,35 @@
+n = int(input("Insira um valor em R$: "))
+a = 0
+b = 0
+c = 0
+d = 0
+e = 0
+while n >= 100:
+    n = n - 100
+    a +=1
+while n >= 50 and n <100:
+    n = n - 50
+    b +=1
+while n >= 20 and n <50:
+    n = n - 20
+    c += 1
+while n >= 10 and n <20:
+    n = n - 10
+    d += 1
+while n >= 5 and n <10:
+    n = n - 5
+    e += 1
+
+if a > 0:
+    print(f'Foram utilizadas {a} nota(s) de R$100,00')
+if b > 0:
+    print(f'Foram utilizadas {b} nota(s) de R$50,00')
+if c > 0:
+    print(f'Foram utilizadas {c} nota(s) de R$20,00')
+if d > 0:
+    print(f'Foram utilizadas {d} nota(s) de R$10,00')
+if e > 0:
+    print(f'Foram utilizadas {e} nota(s) de R$5,00')
+    
+    
+    

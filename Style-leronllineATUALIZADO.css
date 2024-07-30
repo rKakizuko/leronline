@@ -1,0 +1,139 @@
+/* ESTILO GERAL */
+*{
+
+    font-family: "Poppins", sans-serif;
+}
+body{
+    margin: 0px;
+    background-color: #1e1d21;
+
+}
+h2, p, h3{
+    color: #fff;
+}
+.imagens li h3{
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+.interface{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+ul{
+    list-style-type: none;
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+    text-decoration: none;
+}
+i{
+    font-size: 25px;
+    color: rgb(223, 217, 217);
+}
+/* ESTILO HEADER */
+header{
+    padding: 10px 2%;
+    background-color: #2f82cf9a;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+}
+header a:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    transition: .2s;
+}
+.bi-fire:hover{
+    color:rgb(255,177,42);
+    transform: scale(1.05);
+    transition: .2s;
+}
+.bi-search:hover, .bi-list:hover, .bi-person:hover{
+    color: rgb(255, 255, 255);
+    transform: scale(1.05);
+    transition: .2s;
+}
+header nav.menu ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.bi-list{
+    padding-left: 0;
+}
+nav{
+    padding-left: 0;
+}
+
+
+
+/* Principal */
+section.principal{
+    padding: 40px 4%;
+}
+section.principal .flex{
+    gap: 20px;
+}
+.imagens ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-between;
+}
+.imagens li{
+    transition:.2s;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    gap: 20px;
+
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.imagens li:hover {
+    transform: translateY(-5px);
+    transform: scale(1.2);   
+    box-shadow:
+  1px 1px rgba(92, 92, 88, 0.61),
+  -0.5em 0 0.2em rgba(92, 92, 88, 0.61);
+
+}
+.imagens img{
+    border-radius: 10px;
+    padding: 20px;
+
+
+}
+.imagens{
+    text-align: center;
+    padding: 7px;
+    cursor: pointer;
+
+}
+
+.imagens h3{
+    padding: 0px;
+    margin: 0px;
+
+    color: rgb(0, 0, 0);
+}
+span{
+    color: yellow;
+}
