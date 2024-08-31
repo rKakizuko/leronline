@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="leronlineCSS-V8.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <script type="module" src="script-V8.js" ></script>
+
+    <title>Eye Soul</title>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href=""><img src="imagens/novalogo.png"width="150px"></a>
+            </div>
+            <nav class="menu">
+              
+                <ul>
+                    <li><a href=""><i class="bi bi-list"></i></a></li>
+                    <li><a href=""><i class="bi bi-search"></i></a></li>
+                    <li><a href=""><i class="bi bi-fire"></i></a></li>
+                    <li><a href=""><i class="bi bi-person"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>  
+    <main>
+      <section class="principal">
+          <div class="interface">
+              <div class="flex">
+                  <div class="tendencia">
+                      <h2>Livros em alta</h2>
+                  </div>
+                  <div class="imagens carrossel">
+                      <ul> <!--Link da imagem 1 está como placeholder-->
+                            <li class="hoverdaimagem botao" onclick="abrirpopup('Apologia de Sócrates')"><img src="https://m.media-amazon.com/images/I/91J2nXFBZIS._SL1500_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Apologia <br> de Socrates</p></li>
+                            <li class="hoverdaimagem botao" onclick="abrirpopup('A República')"><img src="https://m.media-amazon.com/images/I/81KkahDyzgL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>A República</p>
+                            <li class="hoverdaimagem botao" onclick="abrirpopup('Confissões')"><img src="https://m.media-amazon.com/images/I/81wTnz5u8oL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Confissões</p>
+                            <li class="hoverdaimagem botao" onclick="abrirpopup('Dom Casmurro')"><img src="https://www.coletivoleitor.com.br/wp-content/uploads/2018/09/266581_Capa_ALTA.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Dom Casmurro</p>
+                            <li class="hoverdaimagem botao" onclick="abrirpopup('O Banquete')"><img src="https://www.baixelivros.com.br/media/2019/01/o-banquete.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>O Banquete</p>
+                            <li class="hoverdaimagem botao" onclick="abrirpopup('O Cortiço')"><img src="https://storage-aws-production.publica.la/bookwire-brazil/issues/2024/07/nOgn1RzjsY7m1eGQ/eee1877e-0b68-42de-a17f-c7e1e0f1532b_cover.jpg" width="181px" height="233"><h3><span>★★★★★</span> </h3><p>O cortiço</p>
+                      </ul>
+                  </div>
+              </div>
+              <div class="tendencia">
+                <h2>Poemas Tendência</h2>
+            </div>
+            <div class="imagens carrossel">
+                <ul>
+                    <li class="hoverdaimagem" onclick="abrirpopup('O Corvo')" ><img src="https://m.media-amazon.com/images/I/91GKn4g3fML._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>O Corvo</p></li>
+                    <li class="hoverdaimagem" onclick="abrirpopup('Poema Sujo')"><img src="https://www.bpp.pr.gov.br/sites/biblioteca/arquivos_restritos/files/migrados/Image/Candido_20/capapoemasujooriginal.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Poema Sujo </p></li>
+                    <li class="hoverdaimagem" onclick="abrirpopup('Canção do Exílio')"><img src="https://www.arnaldoniskier.com.br/livraria/produtos/img/classicos_cancao_do_exilio.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Canção do Exílio</p></li>
+                    <li class="hoverdaimagem" onclick="abrirpopup('Soneto da Fidelidades')"><img src="imagens/moraes.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Soneto da Fidelidade</p></li>
+                    <li class="hoverdaimagem" onclick="abrirpopup('Navio Negreiro')"><img src="https://m.media-amazon.com/images/I/71NMYymG6zL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Navio Negreiro</p></li>
+                    <li class="hoverdaimagem" onclick="abrirpopup('Morte e Vida Severina')"><img src="https://m.media-amazon.com/images/I/81znk0mmeHL._SY385_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Morte e Vida <br> Severina</p></li>
+                </ul>
+            </div>
+            <div class="tendencia">
+                <h2>Frases de Escritores Brasileiros</h2>
+            </div>
+            
+                <div class="imagens carrossel">
+                    <ul>
+                        <li>
+                                <div class="container">
+                                    <img src="imagens/20180502-guimaraes-rosa.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                    <div class="overlay">
+                                        <div class="text"><p>"É preciso sofrer depois de ter sofrido, <br>e amar, e mais amar, depois de ter amado."</p></div>
+                                    </div>
+                                </div>
+                                <div class="autor"><p>Guimarães <br>Rosa</p></div>
+                        </li>
+
+                        <li>
+                                <div class="container">
+                                    <img src="imagens//Carlos_Drummond_de_Andrade,_1970.tif.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                    <div class="overlay">
+                                        <div class="text"><p>"Ser feliz sem motivo é a mais autêntica forma de felicidade."</p></div>
+                                    </div>
+                                </div>
+                                <div class="autor"><p>Carlos <br>Drummond</p></div>
+                        </li>
+
+                        <li>
+                                <div class="container">
+                                <img src="imagens/lispector.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="overlay">
+                                    <div class="text"><p>"Que ninguém se engane, só se consegue a simplicidade através de muito trabalho."</p></div>
+                                </div>
+                            </div>
+                            <div class="autor"><p>Clarice <br>Lispector</p></div>
+                        </li>
+                        <li>
+                                <div class="container">
+                                <img src="https://www.academia.org.br/sites/default/files/academicos/fotografias/jose-de-alencar.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="overlay">
+                                    <div class="text"><p>"O amor sem esperança não tem outro refúgio senão a morte."</p></div>
+                                </div>
+                            </div>
+                            <div class="autor"><p>José de<br>Alencar</p></div>
+                        </li>
+                        <li>
+                                <div class="container">
+                                <img src="imagens/bandeira.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="overlay">
+                                    <div class="text"><p>"Eu me amo porque se eu não me amar quem vai me amar?"</p></div>
+                                </div>
+                            </div>
+                            <div class="autor"><p>Manuel<br>Bandeira</p></div>
+                        </li>
+                        <li>
+                                <div class="container">
+                                <img src="imagens/machado-assis.webp" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="overlay">
+                                    <div class="text"><p>"Cada qual sabe amar a seu modo; o modo, pouco importa; o essencial é que saiba amar."</p></div>
+                                </div>
+                            </div>
+                            <div class="autor"><p>Machado <br>de Assis</p></div>
+                        </li>
+                        
+                </ul>  
+            </div>
+            <div class="tendencia">
+                <h2>Frases de Escritores Internacionais</h2>
+            </div>
+            <div class="imagens carrossel">
+                <ul>
+                    <div class="container">
+                        <img src="imagens/20180502-guimaraes-rosa.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                        <div class="overlay">
+                        <div class="text"><p>"É preciso sofrer depois de ter sofrido, <br>e amar, e mais amar, depois de ter amado."</p></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <img src="imagens//Carlos_Drummond_de_Andrade,_1970.tif.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                        <div class="overlay">
+                        <div class="text"><p>"Ser feliz sem motivo é a mais autêntica forma de felicidade."</p></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <img src="imagens/lispector.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                        <div class="overlay">
+                        <div class="text"><p>titulo 1</p></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <img src="imagens/images (1).jpg" width="181px" height="233" alt="Avatar" class="image" >
+                        <div class="overlay">
+                        <div class="text"><p>titulo 1</p></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <img src="imagens/bandeira.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                        <div class="overlay">
+                        <div class="text"><p>titulo 1</p></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <img src="imagens/machado-assis.webp" width="181px" height="233" alt="Avatar" class="image" >
+                        <div class="overlay">
+                        <div class="text"><p>titulo 1</p></div>
+                        </div>
+                    </div>
+            </ul>  
+        </div>
+          </div>
+          <div class="popup" id="popup">
+            <div class="popup-content">
+                <span class="close" onclick="fecha()">&times;</span>
+                <img id="popupImage" src="" alt="Livro">
+                <h3 id="popupTitle"></h3>
+                <p id="popupCategory"></p>
+                <p id="popupSynopsis"></p>
+                <button><a href="https://www.google.com/search?client=firefox-b-d&q=a">a</a></button>
+
+            </div>
+        </div>
+    
+      </section>
+
+
+  </main>
+  <script src="./script-V8.js"></script>
+</body>
+
+
+</html>
+
+
+  <style>
+
+    </style>
