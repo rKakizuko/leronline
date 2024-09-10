@@ -17,7 +17,7 @@ function abrirpopup(title) {
     {
         "nome": "Dom Casmurro",
         "categoria": "Romance",
-        "imagem": "https://www.coletivoleitor.com.br/wp-content/uploads/2018/09/266581_Capa_ALTA.jpg",
+        "imagem": "https://images.universohq.com/2012/09/Dom-Casmurro.jpg",
         "descricao": "Em Dom Casmurro, o narrador Bento Santiago retoma a infância que passou na Rua de Matacavalos e conta a história do amor e das desventuras que viveu com Capitu, uma das personagens mais enigmáticas e intrigantes da literatura brasileira. Nas páginas deste romance, encontra-se a versão de um homem perturbado pelo ciúme, que revela aos poucos sua psicologia complexa e enreda o leitor em sua narrativa ambígua acerca do acontecimento ou não do adultério da mulher com olhos de ressaca, uma das maiores polêmicas da literatura brasileira."
     },
     {
@@ -63,10 +63,10 @@ function abrirpopup(title) {
         "descricao": "\"\"Canção do Exílio\"\" é uma poesia romântica do escritor brasileiro Gonçalves Dias. A composição foi criada em julho de 1843, quando o autor se encontrava estudando direito na Universidade de Coimbra, em Portugal, ressaltando no poema o patriotismo e o saudosismo em relação à sua terra natal, o Brasil. "
     },
     {
-        "nome": "Soneto da Fidelidades",
+        "nome": "Soneto da Fidelidade",
         "categoria": "Poema Romântico",
         "imagem": "https://m.media-amazon.com/images/I/41B0t1h788L._AC_UF1000,1000_QL80_.jpg",
-        "descricao": "O poema Soneto de Fidelidade é da autoria de Vinicius de Moraes e aborda os sentimentos de amor e fidelidade em um relacionamento.\nOs versos foram escritos no Estoril, em outubro de 1939, e foram posteriormente publicados no livro Poemas, Sonetos e Baladas (1946). O poema ganhou logo fama e até hoje é conhecido por embalar casais apaixonados."
+        "descricao": "O poema Soneto de Fidelidade é da autoria de Vinicius de Moraes e aborda os sentimentos de amor e fidelidade em um relacionamento.\nOs versos foram escritos no Estoril, em outubro de 1939, e foram posteriormente publicados no livro Poemas, Sonetos e Baladas (1946)."
     },
     {
         "nome": "Morte e Vida Severina",
@@ -102,36 +102,91 @@ window.onclick = function(event) {
     }
 }
 
-// async function buscarFrase() {
-// 	const nome = document.getElementById('nomeEscritor').value;
 
-// 	try {
-//     	const response = await fetch(`https://api.quotable.io/random?author=${encodeURIComponent(nome)}`);
-//     	const data = await response.json();
 
-//     	if (response.ok) {
-//         	const fraseEmPortugues = await traduzirParaPortugues(data.content);
 
-//         	document.getElementById('frase').textContent = fraseEmPortugues;
-//         	document.getElementById('autor').textContent = `— ${data.author}`;
-//         	document.getElementById('imagemEscritor').src = `caminho/para/imagens/${nome}.jpg`;
-//         	document.getElementById('imagemEscritor').alt = nome;
-//     	} else {
-//         	document.getElementById('frase').textContent = "Escritor não encontrado ou sem frases disponíveis.";
-//         	document.getElementById('autor').textContent = "";
-//         	document.getElementById('imagemEscritor').src = "";
-//         	document.getElementById('imagemEscritor').alt = "";
-//     	}
-// 	} catch (error) {
-//     	document.getElementById('frase').textContent = "Erro ao buscar a frase. Tente novamente.";
-//     	document.getElementById('autor').textContent = "";
-//     	document.getElementById('imagemEscritor').src = "";
-//     	document.getElementById('imagemEscritor').alt = "";
-// 	}
-// }
+// FILTROS
+var filtrar = document.querySelectorAll('.Novidades');
+var escritores = document.querySelectorAll('.escirotes')
+var livros = document.querySelectorAll('.livros')
+var poemas = document.querySelectorAll('.poema')
+var brasileiros = document.querySelectorAll('.brasileiros')
+var internacionais = document.querySelectorAll('.internacionais')
+document.querySelector('#checknovidades').addEventListener("click", function(item){
+  console.log(item)
 
-// async function traduzirParaPortugues(texto) {
-// 	const response = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt&dt=t&q=${encodeURIComponent(texto)}`);
-// 	const result = await response.json();
-// 	return result[0][0][0]; // Retorna a tradução
-// }
+
+  var isChecked = document.getElementById("checknovidades").checked;
+  if (isChecked){
+    filtrar.forEach(item => item.style.display='none');
+    escritores.forEach(item => item.style.display='none');
+  }
+  else{
+    filtrar.forEach(item => item.style.display='');
+    escritores.forEach(item => item.style.display='')
+  }
+})
+
+
+
+
+document.querySelector('#checkpoemas').addEventListener("click", function(item2){
+  console.log(item2)
+
+  var isChecked = document.getElementById("checkpoemas").checked;
+  if (isChecked){
+    livros.forEach(item2 => item2.style.display='none');
+    escritores.forEach(item2 => item2.style.display='none');
+  }
+  else{
+    livros.forEach(item2 => item2.style.display='');
+    escritores.forEach(item2=> item2.style.display='')
+  }
+})
+
+
+document.querySelector('#checkfrases').addEventListener("click", function(item2){
+  console.log(item2)
+
+  var isChecked = document.getElementById("checkfrases").checked;
+  if (isChecked){
+    livros.forEach(item2 => item2.style.display='none');
+    poemas.forEach(item2 => item2.style.display='none');
+  }
+  else{
+    livros.forEach(item2 => item2.style.display='');
+    poemas.forEach(item2=> item2.style.display='')
+  }
+})
+
+document.querySelector('#checkbrasileiros').addEventListener("click", function(item2){
+  console.log(item2)
+
+  var isChecked = document.getElementById("checkbrasileiros").checked;
+  if (isChecked){
+    livros.forEach(item2 => item2.style.display='none');
+    poemas.forEach(item2 => item2.style.display='none');
+    internacionais.forEach(item2 => item2.style.display='none');
+  }
+  else{
+    livros.forEach(item2 => item2.style.display='');
+    poemas.forEach(item2=> item2.style.display='')
+    internacionais.forEach(item2 => item2.style.display='');
+  }
+})
+
+document.querySelector('#checkinternacionais').addEventListener("click", function(item2){
+  console.log(item2)
+
+  var isChecked = document.getElementById("checkinternacionais").checked;
+  if (isChecked){
+    livros.forEach(item2 => item2.style.display='none');
+    poemas.forEach(item2 => item2.style.display='none');
+    brasileiros.forEach(item2 => item2.style.display='none');
+  }
+  else{
+    livros.forEach(item2 => item2.style.display='');
+    poemas.forEach(item2=> item2.style.display='')
+    brasileiros.forEach(item2 => item2.style.display='');
+  }
+})

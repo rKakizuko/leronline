@@ -78,7 +78,7 @@ header a{
 }
 header a:hover{
     color: rgb(255, 255, 255);
-    transform: scale(1.25);
+
     transition: .2s;
     transform: translateY(-5px);
 
@@ -86,7 +86,7 @@ header a:hover{
 
 .bi-fire:hover{
     color:rgb(255,177,42);
-    transform: scale(5);
+
     transition: .2s;
 }
 .bi-search:hover, .bi-list:hover, .bi-person:hover{
@@ -189,24 +189,81 @@ span{
     background-color: rgba(0,0,0,0.5);
 }
 
+
 .popup-content {
     background-color: white;
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 300px;
-    text-align: center;
-    max-height: 60%;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 20px;
+
 }
+.popup-content #popupTitle, #popupCategory{
+    justify-content: center;
+    text-align: center;
+    margin-right: 60px;
+
+}
+
 .popup-content img{
-    max-width: 50%;
+    max-width:30%;
+    margin-right: 20px;
     float: left;
+
+}
+.popup-content button{
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(114, 172, 219);
+    box-shadow: none;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    margin-top: 1%;
+}
+.popup-content button{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+
+}
+
+
+
+.popupBotao:hover{
+    background-color:rgb(114, 172, 219);
+    cursor: pointer;
+    transition: .2s;
 }
 
 
 .popup.abrirpopup {
     display: block;
 }
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .close {
     color: #aaa;
@@ -275,3 +332,111 @@ span{
     font-size: 16px;
 
 }
+
+/* ESTILO FILTRO */
+.filtrar {
+    position: relative;
+    background-color: rgb(114, 172, 219);
+    padding: 0px 4%;
+}
+
+.filtro-icone {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.filtro-icone i {
+    width: 40px;
+    height: 40px;
+}
+
+.filter-dropdown {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9;
+    width: 250px;
+}
+
+.filter-dropdown h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.filter-dropdown label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.filter-dropdown button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(73, 153, 218);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.filter-dropdown {
+    display: none;
+    position: absolute; 
+    top: calc(100% + 5px); 
+    left: 0; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 250px; 
+}
+
+.filter-header {
+    display: flex;
+    justify-content: flex-start;
+
+    border-bottom: 1px solid #ccc;
+
+    margin-bottom: 20px;
+}
+
+
+.filter-header i.bi-x {
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+
+.filter-menu select, 
+.filter-menu input, 
+.filter-menu button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.menu li:hover .filter-dropdown {
+    display: block;
+}
+

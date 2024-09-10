@@ -29,7 +29,19 @@
               
                 <ul>
                     <li><a href=""><i class="bi bi-list"></i></a></li>
-                    <li><a href=""><i class="bi bi-search"></i></a></li>
+                    <li style="position: relative; display: inline-block;">
+                        <a href="" class="filtro"> <i class="bi bi-search"></i></a>
+                        <div id="filterDropdown" class="filter-dropdown">
+                                <h3>Filtrar por:</h3>
+                                <label><input type="checkbox" value="Precomenormaior"id="checknovidades"> Novidades</label>
+                                <label><input type="checkbox" value="ZaA" id="checkpoemas"> Poemas</label>
+                                <label><input type="checkbox" value="Novidades" id="checkfrases"> Frases</label>
+                                <label><input type="checkbox" value="Classicos" id="checkbrasileiros"> Escritores Brasileiros</label>
+                                <label><input type="checkbox" value="Maisvendidos" id="checkinternacionais">Escritores Estrangeiros</label>
+
+
+                        </div>
+                    </li>
                     <li><a href=""><i class="bi bi-fire"></i></a></li>
                     <li><a href=""><i class="bi bi-person"></i></a></li>
                 </ul>
@@ -40,42 +52,42 @@
       <section class="principal">
           <div class="interface">
               <div class="flex">
-                  <div class="tendencia">
+                  <div class="tendencia livros">
                       <h2>Livros em alta</h2>
                   </div>
-                  <div class="imagens carrossel">
-                      <ul> <!--Link da imagem 1 está como placeholder-->
-                            <li class="hoverdaimagem botao" onclick="abrirpopup('Apologia de Sócrates')"><img src="https://m.media-amazon.com/images/I/91J2nXFBZIS._SL1500_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Apologia <br> de Socrates</p></li>
-                            <li class="hoverdaimagem botao" onclick="abrirpopup('A República')"><img src="https://m.media-amazon.com/images/I/81KkahDyzgL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>A República</p>
-                            <li class="hoverdaimagem botao" onclick="abrirpopup('Confissões')"><img src="https://m.media-amazon.com/images/I/81wTnz5u8oL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Confissões</p>
-                            <li class="hoverdaimagem botao" onclick="abrirpopup('Dom Casmurro')"><img src="https://www.coletivoleitor.com.br/wp-content/uploads/2018/09/266581_Capa_ALTA.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Dom Casmurro</p>
-                            <li class="hoverdaimagem botao" onclick="abrirpopup('O Banquete')"><img src="https://www.baixelivros.com.br/media/2019/01/o-banquete.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>O Banquete</p>
-                            <li class="hoverdaimagem botao" onclick="abrirpopup('O Cortiço')"><img src="https://storage-aws-production.publica.la/bookwire-brazil/issues/2024/07/nOgn1RzjsY7m1eGQ/eee1877e-0b68-42de-a17f-c7e1e0f1532b_cover.jpg" width="181px" height="233"><h3><span>★★★★★</span> </h3><p>O cortiço</p>
+                  <div class="imagens carrossel"  id="Novidades" >
+                      <ul>
+                            <li class="hoverdaimagem EmAlta livros"onclick="abrirpopup('Apologia de Sócrates')"><img src="https://m.media-amazon.com/images/I/91J2nXFBZIS._SL1500_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Apologia <br> de Socrates</p></li>
+                            <li class="hoverdaimagem EmAlta livros" onclick="abrirpopup('A República')"><img src="https://m.media-amazon.com/images/I/81KkahDyzgL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>A República</p>
+                            <li class="hoverdaimagem Novidades livros" onclick="abrirpopup('Confissões')"><img src="https://m.media-amazon.com/images/I/81wTnz5u8oL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Confissões</p>
+                            <li class="hoverdaimagem Novidades livros" onclick="abrirpopup('Dom Casmurro')"><img src="https://images.universohq.com/2012/09/Dom-Casmurro.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Dom Casmurro</p>
+                            <li class="hoverdaimagem botao livros" onclick="abrirpopup('O Banquete')"><img src="https://www.baixelivros.com.br/media/2019/01/o-banquete.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>O Banquete</p>
+                            <li class="hoverdaimagem botao livros" onclick="abrirpopup('O Cortiço')"><img src="https://storage-aws-production.publica.la/bookwire-brazil/issues/2024/07/nOgn1RzjsY7m1eGQ/eee1877e-0b68-42de-a17f-c7e1e0f1532b_cover.jpg" width="181px" height="233"><h3><span>★★★★★</span> </h3><p>O cortiço</p>
                       </ul>
                   </div>
               </div>
-              <div class="tendencia">
+              <div class="tendencia poema">
                 <h2>Poemas Tendência</h2>
             </div>
             <div class="imagens carrossel">
                 <ul>
-                    <li class="hoverdaimagem" onclick="abrirpopup('O Corvo')" ><img src="https://m.media-amazon.com/images/I/91GKn4g3fML._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>O Corvo</p></li>
-                    <li class="hoverdaimagem" onclick="abrirpopup('Poema Sujo')"><img src="https://www.bpp.pr.gov.br/sites/biblioteca/arquivos_restritos/files/migrados/Image/Candido_20/capapoemasujooriginal.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Poema Sujo </p></li>
-                    <li class="hoverdaimagem" onclick="abrirpopup('Canção do Exílio')"><img src="https://www.arnaldoniskier.com.br/livraria/produtos/img/classicos_cancao_do_exilio.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Canção do Exílio</p></li>
-                    <li class="hoverdaimagem" onclick="abrirpopup('Soneto da Fidelidades')"><img src="imagens/moraes.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Soneto da Fidelidade</p></li>
-                    <li class="hoverdaimagem" onclick="abrirpopup('Navio Negreiro')"><img src="https://m.media-amazon.com/images/I/71NMYymG6zL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Navio Negreiro</p></li>
-                    <li class="hoverdaimagem" onclick="abrirpopup('Morte e Vida Severina')"><img src="https://m.media-amazon.com/images/I/81znk0mmeHL._SY385_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Morte e Vida <br> Severina</p></li>
+                    <li class="hoverdaimagem Novidades poema" onclick="abrirpopup('O Corvo')" ><img src="https://m.media-amazon.com/images/I/91GKn4g3fML._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>O Corvo</p></li>
+                    <li class="hoverdaimagem EmAlta poema" onclick="abrirpopup('Poema Sujo')"><img src="https://www.bpp.pr.gov.br/sites/biblioteca/arquivos_restritos/files/migrados/Image/Candido_20/capapoemasujooriginal.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Poema Sujo </p></li>
+                    <li class="hoverdaimagem EmAlta poema" onclick="abrirpopup('Canção do Exílio')"><img src="https://www.arnaldoniskier.com.br/livraria/produtos/img/classicos_cancao_do_exilio.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Canção do Exílio</p></li>
+                    <li class="hoverdaimagem poema" onclick="abrirpopup('Soneto da Fidelidade')"><img src="https://m.media-amazon.com/images/I/41B0t1h788L._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Soneto da Fidelidade</p></li>
+                    <li class="hoverdaimagem Novidades EmAlta poema" onclick="abrirpopup('Navio Negreiro')"><img src="https://m.media-amazon.com/images/I/71NMYymG6zL._AC_UF1000,1000_QL80_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Navio Negreiro</p></li>
+                    <li class="hoverdaimagem EmAlta poema" onclick="abrirpopup('Morte e Vida Severina')"><img src="https://m.media-amazon.com/images/I/81znk0mmeHL._SY385_.jpg" width="181px" height="233"><h3><span>★★★★★</span></h3><p>Morte e Vida <br> Severina</p></li>
                 </ul>
             </div>
-            <div class="tendencia">
+            <div class="tendencia escirotes brasileiros">
                 <h2>Frases de Escritores Brasileiros</h2>
             </div>
             
-                <div class="imagens carrossel">
+                <div class="imagens carrossel escirotes brasileiros">
                     <ul>
                         <li>
-                                <div class="container">
-                                    <img src="imagens/20180502-guimaraes-rosa.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="container frases brasileiros">
+                                    <img src="https://www.coladaweb.com/wp-content/uploads/2014/12/20180502-guimaraes-rosa.jpg" width="181px" height="233" alt="Avatar" class="image" >
                                     <div class="overlay">
                                         <div class="text"><p>"É preciso sofrer depois de ter sofrido, <br>e amar, e mais amar, depois de ter amado."</p></div>
                                     </div>
@@ -84,8 +96,8 @@
                         </li>
 
                         <li>
-                                <div class="container">
-                                    <img src="imagens//Carlos_Drummond_de_Andrade,_1970.tif.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="container frases brasileiros">
+                                    <img src="https://www.linhares.es.leg.br/imagens/carlos-drummond-de-andrade.jpg/image_preview" width="181px" height="233" alt="Avatar" class="image" >
                                     <div class="overlay">
                                         <div class="text"><p>"Ser feliz sem motivo é a mais autêntica forma de felicidade."</p></div>
                                     </div>
@@ -94,8 +106,8 @@
                         </li>
 
                         <li>
-                                <div class="container">
-                                <img src="imagens/lispector.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="container frases brasileiros">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1i0dUsnOpgYdNbMPvFiLfgZQBkJK73qTSuQ&s" width="181px" height="233" alt="Avatar" class="image" >
                                 <div class="overlay">
                                     <div class="text"><p>"Que ninguém se engane, só se consegue a simplicidade através de muito trabalho."</p></div>
                                 </div>
@@ -103,7 +115,7 @@
                             <div class="autor"><p>Clarice <br>Lispector</p></div>
                         </li>
                         <li>
-                                <div class="container">
+                                <div class="container frases brasileiros">
                                 <img src="https://www.academia.org.br/sites/default/files/academicos/fotografias/jose-de-alencar.jpg" width="181px" height="233" alt="Avatar" class="image" >
                                 <div class="overlay">
                                     <div class="text"><p>"O amor sem esperança não tem outro refúgio senão a morte."</p></div>
@@ -112,8 +124,8 @@
                             <div class="autor"><p>José de<br>Alencar</p></div>
                         </li>
                         <li>
-                                <div class="container">
-                                <img src="imagens/bandeira.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="container frases brasileiros">
+                                <img src="https://pe.unit.br/wp-content/uploads/2022/12/manuelbandedira.png" width=181px height="233" alt="Avatar" class="image" >
                                 <div class="overlay">
                                     <div class="text"><p>"Eu me amo porque se eu não me amar quem vai me amar?"</p></div>
                                 </div>
@@ -121,8 +133,8 @@
                             <div class="autor"><p>Manuel<br>Bandeira</p></div>
                         </li>
                         <li>
-                                <div class="container">
-                                <img src="imagens/machado-assis.webp" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="container frases brasileiros">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Brazilian_writer_Machado_de_Assis.png" width="181px" height="233" alt="Avatar" class="image" >
                                 <div class="overlay">
                                     <div class="text"><p>"Cada qual sabe amar a seu modo; o modo, pouco importa; o essencial é que saiba amar."</p></div>
                                 </div>
@@ -132,49 +144,72 @@
                         
                 </ul>  
             </div>
-            <div class="tendencia">
+            <div class="tendencia  escirotes internacionais">
                 <h2>Frases de Escritores Internacionais</h2>
             </div>
-            <div class="imagens carrossel">
-                <ul>
-                    <div class="container">
-                        <img src="imagens/20180502-guimaraes-rosa.jpg" width="181px" height="233" alt="Avatar" class="image" >
-                        <div class="overlay">
-                        <div class="text"><p>"É preciso sofrer depois de ter sofrido, <br>e amar, e mais amar, depois de ter amado."</p></div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <img src="imagens//Carlos_Drummond_de_Andrade,_1970.tif.jpg" width="181px" height="233" alt="Avatar" class="image" >
-                        <div class="overlay">
-                        <div class="text"><p>"Ser feliz sem motivo é a mais autêntica forma de felicidade."</p></div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <img src="imagens/lispector.jpg" width="181px" height="233" alt="Avatar" class="image" >
-                        <div class="overlay">
-                        <div class="text"><p>titulo 1</p></div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <img src="imagens/images (1).jpg" width="181px" height="233" alt="Avatar" class="image" >
-                        <div class="overlay">
-                        <div class="text"><p>titulo 1</p></div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <img src="imagens/bandeira.jpg" width="181px" height="233" alt="Avatar" class="image" >
-                        <div class="overlay">
-                        <div class="text"><p>titulo 1</p></div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <img src="imagens/machado-assis.webp" width="181px" height="233" alt="Avatar" class="image" >
-                        <div class="overlay">
-                        <div class="text"><p>titulo 1</p></div>
-                        </div>
-                    </div>
-            </ul>  
-        </div>
+            
+                <div class="imagens carrossel escirotes internacionais">
+                    <ul>
+                        <li>
+                                <div class="container frases internacionais">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mark_Twain_by_AF_Bradley.jpg/640px-Mark_Twain_by_AF_Bradley.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                    <div class="overlay">
+                                        <div class="text"><p>"De todas as coisas que já perdi, <br> sinto mais saudade da minha cabeça."</p></div>
+                                    </div>
+                                </div>
+                                <div class="autor"><p>Mark<br>Twain</p></div>
+
+                        </li>
+
+                        <li>
+                                <div class="container frases internacionais">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQeQcplMB69aK1FFfVgbXvkpRM-h4it5SO5A&s" width="181px" height="233" alt="Avatar" class="image" >
+                                    <div class="overlay">
+                                        <div class="text"><p>"Todo mundo é capaz de dominar uma dor, exceto quem a sente."</p></div>
+                                    </div>
+                                </div>
+                                <div class="autor"><p>William <br> Shakespeare</p></div>
+                        </li>
+
+                        <li>
+                                <div class="container frases internacionais">
+                                <img src="https://cdn.britannica.com/52/75052-050-777F7105/Charles-Dickens.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="overlay">
+                                    <div class="text"><p>"A amizade da mulher para com o homem é um beco sem saída, para o qual a empurrou o engano no amor."</p></div>
+                                </div>
+                            </div>
+                            <div class="autor"><p>Charles <br> Dickens</p></div>
+                        </li>
+                        <li>
+                                <div class="container frases internacionais">
+                                <img src="https://img.peliplat.com/api/resize/v1?imagePath=std/201611/b/9/b94424a2cf3dd69b52027e383db510e1.jpg&mode=FILL&width=750&height=880&limit=false&c=1.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="overlay">
+                                    <div class="text"><p>"Viver é a coisa mais rara do mundo. A maioria das pessoas apenas existe."</p></div>
+                                </div>
+                            </div>
+                            <div class="autor"><p>Oscar <br> Wilde</p></div>
+                        </li>
+                        <li>
+                                <div class="container frases internacionais">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/George_Charles_Beresford_-_Virginia_Woolf_in_1902.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="overlay">
+                                    <div class="text"><p>"A vida é como um sonho; é o acordar que nos mata."</p></div>
+                                </div>
+                            </div>
+                            <div class="autor"><p>Virginia <br> Woolf</p></div>
+                        </li>
+                        <li>
+                                <div class="container frases internacionais">
+                                <img src="https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2017/07/18/gettyimages-2667605.jpg" width="181px" height="233" alt="Avatar" class="image" >
+                                <div class="overlay">
+                                    <div class="text"><p>"Metade do mundo não consegue compreender os prazeres da outra metade."</p></div>
+                                </div>
+                            </div>
+                            <div class="autor"><p>Jane <br> Austen</p></div>
+                        </li>
+                        
+                </ul>  
+            </div>
           </div>
           <div class="popup" id="popup">
             <div class="popup-content">
@@ -183,7 +218,7 @@
                 <h3 id="popupTitle"></h3>
                 <p id="popupCategory"></p>
                 <p id="popupSynopsis"></p>
-                <button><a href="https://www.google.com/search?client=firefox-b-d&q=a">a</a></button>
+                <a href="https://www.google.com/search?client=firefox-b-d&q=a"><button class="popupBotao">Ler Agora!</button></a>
 
             </div>
         </div>
